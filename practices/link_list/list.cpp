@@ -43,7 +43,7 @@ List::List(): head(nullptr), length(0) {
 List::~List() {
     while (head != nullptr) {
         node *tmp = head->next;
-        free(head);
+        delete head;
         head = tmp;
     }
 }
@@ -87,7 +87,7 @@ int List::pop_front() {
     auto value = head->value;
     auto old_head = head;
     head = head->next;
-    free(old_head);
+    delete old_head;
     length--;
     return value;
 }
@@ -121,14 +121,14 @@ int List::pop_back() {
     int value;
     if (length == 1) {
         value = cursor->value;
-        free(head);
+        delete head;
         head = nullptr;
     } else {
         while (cursor->next->next != nullptr) {
             cursor = cursor->next;
         }
         value = cursor->next->value;
-        free(cursor->next);
+        delete cursor->next;
         cursor->next = nullptr;
     }
     length--;
@@ -189,7 +189,7 @@ void List::erase(int index) {
             cursor = cursor->next;
         }
         auto new_neighbor = cursor->next->next;
-        free(cursor->next);
+        delete cursor->next;
         cursor->next = new_neighbor;
         length--;
     }
@@ -233,7 +233,7 @@ void List::remove_value(int value) {
             cursor = cursor->next;
             if (cursor->value == value) {
                 prev->next = cursor->next;
-                free(cursor);
+                delete cursor;
                 length--;
                 break;
             }

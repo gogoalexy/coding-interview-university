@@ -4,80 +4,67 @@
 
 using namespace std;
 
-struct node {
-    int value;
-    node *next;
-};
-
-
 class Queue {
 
     public:
         Queue();
         ~Queue();
         bool empty();
+        bool full();
         int dequeue();
         void enqueue(int);
         void print();
 
     private:
-        node *head;
-        node *tail;
-        int length;
+        const int capacity;
+        int *queue;
+        int head;
+        int tail;
 };
 
-Queue::Queue(): head(nullptr), tail(nullptr), length(0) {
-
+Queue::Queue(): head(0), tail(0), capacity(8) {
+    try {
+        queue = new int(capacity);
+    } catch (bad_alloc) {
+        exit(EXIT_FAILURE);
+    }
 }
 
 Queue::~Queue() {
-    while (head != nullptr) {
-        node *tmp = head->next;
-        delete head;
-        head = tmp;
-    }
+    delete [] queue;
 }
 
 bool Queue::empty() {
-    return (length == 0);
+    return (head == tail);
+}
+
+bool Queue::full() {
+    return (head == (tail + 1) % capacity);
 }
 
 int Queue::dequeue() {
-    if (length == 0) {
+    if (empty()) {
         throw out_of_range("nothing in queue");
     }
-    auto value = head->value;
-    auto old_head = head;
-    head = head->next;
-    delete old_head;
-    length--;
+    auto value = queue[head];
+    queue[head] = -1;
+    head = (head + 1) % capacity;
     return value;
 }
 
 void Queue::enqueue(int value) {
-    node *new_node;
-    try {
-        new_node = new node;
-    } catch (bad_alloc) {
-        exit(EXIT_FAILURE);
+    if (full()) {
+        throw out_of_range("no space to queue");
     }
-    new_node->value = value;
-    new_node->next = nullptr;
-    if (length == 0) {
-        head = new_node;
-        tail = new_node;
-    } else {
-        tail->next = new_node;
-        tail = new_node;
-    }
-    length++;
+    queue[tail] = value;
+    tail = (tail + 1) % capacity;
 }
 
 
 void Queue::print() {
     cout << "[ ";
-    for (auto cursor = head; cursor != nullptr; cursor = cursor->next) {
-        cout << cursor->value << ", ";
+    for (auto cursor = head; cursor != tail; cursor = (cursor + 1) % capacity) {
+        cout << cursor << ':' << queue[cursor] << ", ";
     }
     cout << ']' << endl;
 }
@@ -107,10 +94,18 @@ int main() {
             case 'U': // push / push back / enqueue
                 cout << "Enter the value to queue:";
                 cin >> value;
-                q.enqueue(value);
+                try {
+                    q.enqueue(value);
+                } catch (exception &e) {
+                    cout << "Error: " << e.what() << endl;
+                }
                 break;
             case 'T': // is_empty
                 placeholder = q.empty() ? "empty" : "not empty";
+                cout << "The queue is " + placeholder << endl;
+                break;
+            case 'L': // full
+                placeholder = q.full() ? "full" : "not full";
                 cout << "The queue is " + placeholder << endl;
                 break;
             case 'Q':
