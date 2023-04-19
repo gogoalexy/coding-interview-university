@@ -688,7 +688,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
 
     - [ ] Online Courses:
         - [x] [Core Hash Tables (video)](https://www.coursera.org/lecture/data-structures-optimizing-performance/core-hash-tables-m7UuP)
-        - [ ] [Data Structures (video)](https://www.coursera.org/learn/data-structures/home/week/4)
+        - [x] [Data Structures (video) Paywall](https://www.coursera.org/learn/data-structures/home/week/4)
         - [x] [Phone Book Problem (video)](https://www.coursera.org/lecture/data-structures/phone-book-problem-NYZZP)
         - [x] distributed hash tables:
             - [Instant Uploads And Storage Optimization In Dropbox (video)](https://www.coursera.org/lecture/data-structures/instant-uploads-and-storage-optimization-in-dropbox-DvaIb)
