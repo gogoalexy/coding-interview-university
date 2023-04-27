@@ -686,7 +686,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [x] [(Advanced) Perfect hashing (video) Not quite understand](https://www.youtube.com/watch?v=N0COwN14gt0&list=PL2B4EEwhKD-NbwZ4ezj7gyc_3yNrojKM9&index=4)
         - [x] [[Review] Hash tables in 4 minutes (video)](https://youtu.be/knV86FlSXJ8)
 
-    - [ ] Online Courses:
+    - [x] Online Courses:
         - [x] [Core Hash Tables (video)](https://www.coursera.org/lecture/data-structures-optimizing-performance/core-hash-tables-m7UuP)
         - [x] [Data Structures (video) Paywall](https://www.coursera.org/learn/data-structures/home/week/4)
         - [x] [Phone Book Problem (video)](https://www.coursera.org/lecture/data-structures/phone-book-problem-NYZZP)
@@ -694,7 +694,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
             - [Instant Uploads And Storage Optimization In Dropbox (video)](https://www.coursera.org/lecture/data-structures/instant-uploads-and-storage-optimization-in-dropbox-DvaIb)
             - [Distributed Hash Tables (video)](https://www.coursera.org/lecture/data-structures/distributed-hash-tables-tvH8H)
 
-    - [ ] Implement with array using linear probing
+    - [x] Implement with array using linear probing
         - hash(k, m) - m is size of hash table
         - add(key, value) - if key already exists, update value
         - exists(key)
