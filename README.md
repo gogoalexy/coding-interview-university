@@ -682,8 +682,8 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [x] [Open Addressing, Cryptographic Hashing (video)](https://www.youtube.com/watch?v=rvdJDijO2Ro&index=10&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb)
         - [x] [PyCon 2010: The Mighty Dictionary (video)](https://www.youtube.com/watch?v=C4Kc8xzcA68)
         - [x] [PyCon 2017: The Dictionary Even Mightier (video)](https://www.youtube.com/watch?v=66P5FMkWoVU)
-        - [x] [(Advanced) Randomization: Universal & Perfect Hashing (video) Not quite understand](https://www.youtube.com/watch?v=z0lJ2k0sl1g&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=11)
-        - [x] [(Advanced) Perfect hashing (video) Not quite understand](https://www.youtube.com/watch?v=N0COwN14gt0&list=PL2B4EEwhKD-NbwZ4ezj7gyc_3yNrojKM9&index=4)
+        - [x] [(Advanced) Randomization: Universal & Perfect Hashing (video) __Not quite understand__](https://www.youtube.com/watch?v=z0lJ2k0sl1g&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=11)
+        - [x] [(Advanced) Perfect hashing (video) __Not quite understand__](https://www.youtube.com/watch?v=N0COwN14gt0&list=PL2B4EEwhKD-NbwZ4ezj7gyc_3yNrojKM9&index=4)
         - [x] [[Review] Hash tables in 4 minutes (video)](https://youtu.be/knV86FlSXJ8)
 
     - [x] Online Courses:
@@ -722,11 +722,11 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [x] [C Programming Tutorial 2-10: Bitwise Operators (video)](https://www.youtube.com/watch?v=d0AwjSpNXR0)
         - [x] [Bit Manipulation](https://en.wikipedia.org/wiki/Bit_manipulation)
         - [x] [Bitwise Operation](https://en.wikipedia.org/wiki/Bitwise_operation)
-        - [ ] [Bithacks](https://graphics.stanford.edu/~seander/bithacks.html)
-        - [ ] [The Bit Twiddler](https://bits.stephan-brumme.com/)
-        - [ ] [The Bit Twiddler Interactive](https://bits.stephan-brumme.com/interactive.html)
+        - [x] [Bithacks __Not thoroughly read__](https://graphics.stanford.edu/~seander/bithacks.html)
+        - [x] [The Bit Twiddler __Not thoroughly read__](https://bits.stephan-brumme.com/)
+        - [x] [The Bit Twiddler Interactive](https://bits.stephan-brumme.com/interactive.html)
         - [ ] [Bit Hacks (video)](https://www.youtube.com/watch?v=ZusiKXcz_ac)
-		- [ ] [Practice Operations](https://pconrad.github.io/old_pconrad_cs16/topics/bitOps/)
+		- [2] [Practice Operations](https://pconrad.github.io/old_pconrad_cs16/topics/bitOps/)
     - [x] 2s and 1s complement
         - [Binary: Plusses & Minuses (Why We Use Two's Complement) (video)](https://www.youtube.com/watch?v=lKTsv6iVxV4)
         - [1s Complement](https://en.wikipedia.org/wiki/Ones%27_complement)
